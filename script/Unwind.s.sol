@@ -17,7 +17,6 @@ contract UnwindScript is Script, Test {
         vm.startBroadcast();
         Unwind unwind = new Unwind();
         aAvaUSDC.approve(address(unwind), type(uint).max);
-        // Unwind unwind = Unwind(0xB7DEA8552B2555082fdd65455570f4F2cF669C99);
         uint usdtAmount = 15600e6;
         uint usdcAmount = 15750e6;
 
