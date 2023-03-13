@@ -20,10 +20,14 @@ Note: Users have to approve their collateral aToken to the contract so it can
 At the end of `Unwind.unwind` transaction all the remainder collateral and debt
 token assets are returned back to the user.
 
+---
+
 A similar contract and script can also be written for levering up. Maybe something for
 future if I find some personal use for that case. New users can also just use something
 like DefiSaver or InstaDapp DSAs to open/close levered positions. I personally needed
 this script for an existing position on an EOA.
+
+---
 
 This repo can serve as a good example of how to integrate and utilize flashloans
 securely with relevant checks on callbacks, forge FFI in scripts, and also generally
