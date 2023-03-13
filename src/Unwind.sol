@@ -124,6 +124,10 @@ contract Unwind is IFlashLoanRecipient, IFlashLoanSimpleReceiver {
         // swap the collateral for debt token
         uint totalRepay = _flashBorrowedAmount + _flashBorrowFee;
         ERC20(_collToken).safeApprove(_swapper, _collToWithdraw);
+        // VERY open. Make sure you don't leave any pending token approvals
+        // credit delegations or tokens on this contract.
+        // Revoke after use or approve only required amounts that will
+        // exhaust all of the approved amount.
         (bool success, ) = _swapper.call(_swapData);
         if (ERC20(_debtToken).balanceOf(address(this)) < totalRepay)
             revert InsufficientOutput(
