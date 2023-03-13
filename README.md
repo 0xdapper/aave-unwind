@@ -25,6 +25,10 @@ future if I find some personal use for that case. New users can also just use so
 like DefiSaver or InstaDapp DSAs to open/close levered positions. I personally needed
 this script for an existing position on an EOA.
 
+This repo can serve as a good example of how to integrate and utilize flashloans
+securely with relevant checks on callbacks, forge FFI in scripts, and also generally
+how you can use forge scripts to orchestrate actions from your EOAs too.
+
 ## Script
 
 [`Unwind.s.sol`](./script/Unwind.s.sol) can be used by users to unwind their positions
